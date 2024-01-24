@@ -32,10 +32,11 @@ $(function () {
   // Get the container element
   var container = document.getElementById("timeBlocksContainer");
 
-  // Create and append time blocks
-  container.appendChild(createTimeBlock("hour-9", "9AM", "past"));
-  container.appendChild(createTimeBlock("hour-10", "10AM", "present"));
-  container.appendChild(createTimeBlock("hour-11", "11AM", "future"));
+  // Create and append time blocks for standard business hours (9am to 5pm)
+  for (var i = 9; i <= 17; i++) {
+    var timeClass = i < dayjs().hour() ? "past" : (i === dayjs().hour() ? "present" : "future");
+    container.appendChild(createTimeBlock("hour-" + i, i + "AM", timeClass));
+  }
 
   // Add a listener for click events on the save button.
   $(document).on("click", ".saveBtn", function () {
@@ -49,18 +50,11 @@ $(function () {
 
   // Apply the past, present, or future class to each time block.
   function updateHourClasses() {
-    var currentHour = dayjs().format("H");
-
     $(".time-block").each(function () {
       var blockHour = parseInt($(this).attr("id").split("-")[1]);
+      var timeClass = blockHour < dayjs().hour() ? "past" : (blockHour === dayjs().hour() ? "present" : "future");
 
-      if (blockHour < currentHour) {
-        $(this).removeClass("present future").addClass("past");
-      } else if (blockHour == currentHour) {
-        $(this).removeClass("past future").addClass("present");
-      } else {
-        $(this).removeClass("past present").addClass("future");
-      }
+      $(this).removeClass("past present future").addClass(timeClass);
     });
   }
 
@@ -77,9 +71,12 @@ $(function () {
   }
 
   // Display the current date in the header of the page.
-  $("#currentDay").text(dayjs().format("dddd, MMMM D"));
+  function displayCurrentDate() {
+    $("#currentDay").text(dayjs().format("dddd, MMMM D"));
+  }
 
   // Initial setup
+  displayCurrentDate();
   updateHourClasses();
   loadSavedData();
 
