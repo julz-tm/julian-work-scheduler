@@ -35,7 +35,7 @@ This Work Day Scheduler is a web application that allows you to plan and schedul
 ## Dependencies
 - jQuery
 - Day.js
-- https://github.com/coding-boot-camp/crispy-octo-meme.git
+- https://github.com/coding-boot-camp/crispy-octo-meme.git (used code as starting point in html, css and javascript)
 
 ## Link
 https://julz-tm.github.io/julian-work-scheduler/
