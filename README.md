@@ -9,6 +9,7 @@ A simple calendar app for scheduling your work day.
 - [Usage](#usage)
 - [Dependencies](#dependencies)
 - [URL Link](#link)
+- [Screenshot](#screenshot)
 - [License](#license)
 
 ## Introduction
@@ -38,6 +39,9 @@ This Work Day Scheduler is a web application that allows you to plan and schedul
 
 ## Link
 https://julz-tm.github.io/julian-work-scheduler/
+
+## Screenshot
+- ![Alt text](<Screenshot 2024-01-23 at 8.52.03 PM.png>)
 
 ## License
 This project is licensed under the MIT License.
