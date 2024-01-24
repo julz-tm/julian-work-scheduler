@@ -41,7 +41,7 @@ This Work Day Scheduler is a web application that allows you to plan and schedul
 https://julz-tm.github.io/julian-work-scheduler/
 
 ## Screenshot
-- ![Alt text](<Screenshot 2024-01-23 at 8.52.03 PM.png>)
+- ![Alt text]([<Screenshot 2024-01-23 at 8.52.03 PM.png>](https://github.com/julz-tm/julian-work-scheduler/blob/main/assets/Screenshot%202024-01-23%20at%208.52.03%E2%80%AFPM.png#:~:text=assets-,Screenshot,-2024%2D01%2D23)
 
 ## License
 This project is licensed under the MIT License.
